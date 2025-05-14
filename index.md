@@ -1,8 +1,3 @@
----
-
-
----
-
 <h2 id="mastering-sql-advanced-techniques-and-best-practices-for-efficient-database-management">Mastering SQL: Advanced Techniques and Best Practices for Efficient Database Management</h2>
 <ol>
 <li>
