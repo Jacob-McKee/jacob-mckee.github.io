@@ -1,0 +1,1212 @@
+﻿<h1 id="python-refresher">Python Refresher</h1>
+<hr>
+<ol>
+<li>
+<p><strong>Introduction to Python</strong></p>
+<ul>
+<li>History and features of Python</li>
+<li>Setting up Python environment</li>
+<li>Running Python scripts and using the Python REPL</li>
+</ul>
+</li>
+<li>
+<p><strong>Basic Data Types and Variables</strong></p>
+<ul>
+<li>Integers, floats, strings, and booleans</li>
+<li>Variable assignment and naming conventions</li>
+<li>Type conversion and basic input/output</li>
+</ul>
+</li>
+<li>
+<p><strong>Control Flow</strong></p>
+<ul>
+<li>Conditional statements: if, elif, else</li>
+<li>Boolean logic and comparison operators</li>
+<li>Looping: for loops, while loops, break and continue</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Structures</strong></p>
+<ul>
+<li>Lists: creation, indexing, slicing, and methods</li>
+<li>Tuples and sets</li>
+<li>Dictionaries: keys, values, and common methods</li>
+</ul>
+</li>
+<li>
+<p><strong>Functions and Modules</strong></p>
+<ul>
+<li>Defining and calling functions</li>
+<li>Arguments, return values, and scope</li>
+<li>Importing modules and using standard libraries</li>
+</ul>
+</li>
+<li>
+<p><strong>File Handling</strong></p>
+<ul>
+<li>Reading from and writing to files</li>
+<li>Working with file paths</li>
+<li>Context managers (with statement)</li>
+</ul>
+</li>
+<li>
+<p><strong>Error Handling and Exceptions</strong></p>
+<ul>
+<li>Common exceptions in Python</li>
+<li>Try, except, else, and finally blocks</li>
+<li>Raising exceptions and custom exception classes</li>
+</ul>
+</li>
+<li>
+<p><strong>Object-Oriented Programming (OOP)</strong></p>
+<ul>
+<li>Classes and objects</li>
+<li>Attributes and methods</li>
+<li>Inheritance and polymorphism</li>
+</ul>
+</li>
+<li>
+<p><strong>Working with External Libraries</strong></p>
+<ul>
+<li>Installing packages with pip</li>
+<li>Using popular libraries (e.g., requests, numpy, pandas)</li>
+<li>Virtual environments and dependency management</li>
+</ul>
+</li>
+<li>
+<p><strong>Practical Projects and Next Steps</strong></p>
+<ul>
+<li>Small project ideas (e.g., calculator, web scraper)</li>
+<li>Testing and debugging basics</li>
+<li>Resources for further learning (books, sites, communities)</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="chapter-1-introduction-to-python">Chapter 1: Introduction to Python</h1>
+<h2 id="what-is-python">1.1 What is Python?</h2>
+<p>Python is a high-level, interpreted programming language known for its simplicity, readability, and versatility. Created by Guido van Rossum and first released in 1991, Python has become one of the most popular programming languages in the world, used in web development, data science, automation, artificial intelligence, robotics, and more.</p>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li>Easy-to-read, English-like syntax</li>
+<li>Interpreted and dynamically typed</li>
+<li>Extensive standard library and active community</li>
+<li>Cross-platform compatibility</li>
+</ul>
+<h2 id="why-use-python">1.2 Why Use Python?</h2>
+<p>Python is ideal for both beginners and experienced developers because:</p>
+<ul>
+<li>It allows quick prototyping and development.</li>
+<li>It offers a clean and readable syntax, reducing the learning curve.</li>
+<li>It has a vast ecosystem of third-party packages.</li>
+<li>It is open-source and free to use.</li>
+</ul>
+<h2 id="installing-python">1.3 Installing Python</h2>
+<h3 id="check-if-python-is-installed">Check if Python is Installed</h3>
+<p>Open a terminal (Command Prompt, PowerShell, or Terminal) and type:</p>
+<pre class=" language-sh"><code class="prism  language-sh">python --version
+</code></pre>
+<p>or</p>
+<pre class=" language-sh"><code class="prism  language-sh">python3 --version
+</code></pre>
+<p>If you see a version number (e.g., <code>Python 3.11.0</code>), Python is installed.</p>
+<h3 id="download-and-install">Download and Install</h3>
+<ul>
+<li>Go to the <a href="https://www.python.org/downloads/">official Python website</a> and download the latest version for your operating system.</li>
+<li>Follow the installation instructions. Make sure to check the box to “Add Python to PATH” during installation.</li>
+</ul>
+<h2 id="running-python-code">1.4 Running Python Code</h2>
+<h3 id="interactive-python-repl">Interactive Python (REPL)</h3>
+<p>You can start the Python interactive shell (REPL) by typing:</p>
+<pre class=" language-sh"><code class="prism  language-sh">python
+</code></pre>
+<p>or</p>
+<pre class=" language-sh"><code class="prism  language-sh">python3
+</code></pre>
+<p>You’ll see a prompt like:</p>
+<pre><code>&gt;&gt;&gt;
+</code></pre>
+<p>You can type Python code here and see the results immediately.</p>
+<p><strong>Example:</strong></p>
+<pre><code>&gt;&gt;&gt; print("Hello, world!")
+Hello, world!
+</code></pre>
+<h3 id="running-python-scripts">Running Python Scripts</h3>
+<p>Save your code in a file with a <code>.py</code> extension, for example <code>hello.py</code>:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello, world!"</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Run the script from the terminal:</p>
+<pre class=" language-sh"><code class="prism  language-sh">python hello.py
+</code></pre>
+<h2 id="python-ides-and-editors">1.5 Python IDEs and Editors</h2>
+<p>You can write Python code in any text editor, but some popular choices include:</p>
+<ul>
+<li><a href="https://code.visualstudio.com/">VS Code</a></li>
+<li><a href="https://www.jetbrains.com/pycharm/">PyCharm</a></li>
+<li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
+<li><a href="https://jupyter.org/">Jupyter Notebook</a></li>
+</ul>
+<p>Choose the one that best fits your workflow.</p>
+<h2 id="next-steps">1.6 Next Steps</h2>
+<p>Now that you have Python installed and know how to run code, you’re ready to dive into Python’s basic data types and variables in Chapter 2.</p>
+<hr>
+<p><strong>Summary:</strong><br>
+This chapter introduced Python’s history, features, setup, and how to run Python code interactively and via scripts. You also learned about different editors to write Python code. In the next chapter, we’ll explore the core building blocks of Python: data types and variables.</p>
+<hr>
+<hr>
+<h1 id="chapter-2-basic-data-types-and-variables">Chapter 2: Basic Data Types and Variables</h1>
+<h2 id="introduction">2.1 Introduction</h2>
+<p>Every programming language has ways to store and manipulate data. In Python, data is represented using various built-in data types. Understanding these types and how to use variables is essential for building any Python program.</p>
+<hr>
+<h2 id="core-data-types">2.2 Core Data Types</h2>
+<h3 id="integers">Integers</h3>
+<ul>
+<li>Whole numbers, positive or negative, with no decimals.</li>
+<li>Example:<pre class=" language-python"><code class="prism  language-python">age <span class="token operator">=</span> <span class="token number">30</span>
+temperature <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">5</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="floats">Floats</h3>
+<ul>
+<li>Numbers with decimal points.</li>
+<li>Example:<pre class=" language-python"><code class="prism  language-python">price <span class="token operator">=</span> <span class="token number">19.99</span>
+pi <span class="token operator">=</span> <span class="token number">3.14159</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="strings">Strings</h3>
+<ul>
+<li>Sequences of characters, used for text.</li>
+<li>Enclosed in single (<code>'...'</code>) or double (<code>"..."</code>) quotes.</li>
+<li>Example:<pre class=" language-python"><code class="prism  language-python">name <span class="token operator">=</span> <span class="token string">"Alice"</span>
+greeting <span class="token operator">=</span> <span class="token string">'Hello, world!'</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="booleans">Booleans</h3>
+<ul>
+<li>Represents truth values: <code>True</code> or <code>False</code>.</li>
+<li>Used for logic and conditions.</li>
+<li>Example:<pre class=" language-python"><code class="prism  language-python">is_sunny <span class="token operator">=</span> <span class="token boolean">True</span>
+is_raining <span class="token operator">=</span> <span class="token boolean">False</span>
+</code></pre>
+</li>
+</ul>
+<hr>
+<h2 id="variables">2.3 Variables</h2>
+<ul>
+<li>Variables are names that store data values.</li>
+<li>You assign a value using the <code>=</code> operator.</li>
+<li>Variable names can contain letters, numbers, and underscores, but cannot start with a number.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre class=" language-python"><code class="prism  language-python">x <span class="token operator">=</span> <span class="token number">5</span>
+user_name <span class="token operator">=</span> <span class="token string">"Bob"</span>
+has_access <span class="token operator">=</span> <span class="token boolean">False</span>
+</code></pre>
+<p><strong>Naming Conventions:</strong></p>
+<ul>
+<li>Use lowercase with underscores for variable names (<code>snake_case</code>).</li>
+<li>Be descriptive to make code clearer.</li>
+</ul>
+<hr>
+<h2 id="type-conversion">2.4 Type Conversion</h2>
+<p>You can convert between data types using built-in functions:</p>
+<pre class=" language-python"><code class="prism  language-python">age <span class="token operator">=</span> <span class="token string">"30"</span>
+age <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span>  <span class="token comment"># Converts string to integer</span>
+
+price <span class="token operator">=</span> <span class="token number">10</span>
+price_str <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>price<span class="token punctuation">)</span>  <span class="token comment"># Converts integer to string</span>
+
+is_valid <span class="token operator">=</span> <span class="token builtin">bool</span><span class="token punctuation">(</span><span class="token string">"non-empty"</span><span class="token punctuation">)</span>  <span class="token comment"># Converts to True</span>
+</code></pre>
+<hr>
+<h2 id="basic-input-and-output">2.5 Basic Input and Output</h2>
+<h3 id="output-with-print">Output with <code>print()</code></h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Welcome to Python!"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"The answer is"</span><span class="token punctuation">,</span> <span class="token number">42</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="input-with-input">Input with <code>input()</code></h3>
+<pre class=" language-python"><code class="prism  language-python">name <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Enter your name: "</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello,"</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p>Note: <code>input()</code> always returns a string. Convert it to another type if needed.</p>
+</blockquote>
+<pre class=" language-python"><code class="prism  language-python">age <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Enter your age: "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Next year you will be"</span><span class="token punctuation">,</span> age <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h2 id="checking-types">2.6 Checking Types</h2>
+<p>Use the <code>type()</code> function to check a variable’s data type:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">)</span>        <span class="token comment"># &lt;class 'int'&gt;</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">)</span><span class="token punctuation">)</span>      <span class="token comment"># &lt;class 'float'&gt;</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment"># &lt;class 'str'&gt;</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span>      <span class="token comment"># &lt;class 'bool'&gt;</span>
+</code></pre>
+<hr>
+<h2 id="summary">2.7 Summary</h2>
+<ul>
+<li>Python’s basic data types: int, float, str, and bool.</li>
+<li>Variables are used to store data.</li>
+<li>You can convert between types as needed.</li>
+<li>Use <code>print()</code> for output and <code>input()</code> for user input.</li>
+</ul>
+<p>In the next chapter, we’ll see how to use these values in decision-making and loops with control flow statements.</p>
+<hr>
+<hr>
+<h1 id="chapter-3-control-flow">Chapter 3: Control Flow</h1>
+<h2 id="introduction-1">3.1 Introduction</h2>
+<p>Control flow statements determine the order in which code is executed in a Python program. In this chapter, you’ll learn how to make decisions with conditional statements and how to repeat actions using loops.</p>
+<hr>
+<h2 id="conditional-statements">3.2 Conditional Statements</h2>
+<p>Conditional statements let you execute code blocks only if certain conditions are met.</p>
+<h3 id="the-if-statement">The <code>if</code> Statement</h3>
+<pre class=" language-python"><code class="prism  language-python">x <span class="token operator">=</span> <span class="token number">10</span>
+<span class="token keyword">if</span> x <span class="token operator">&gt;</span> <span class="token number">5</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"x is greater than 5"</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="if-else-statement"><code>if-else</code> Statement</h3>
+<pre class=" language-python"><code class="prism  language-python">age <span class="token operator">=</span> <span class="token number">17</span>
+<span class="token keyword">if</span> age <span class="token operator">&gt;=</span> <span class="token number">18</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"You can vote."</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"You cannot vote."</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="if-elif-else-statement"><code>if-elif-else</code> Statement</h3>
+<pre class=" language-python"><code class="prism  language-python">score <span class="token operator">=</span> <span class="token number">85</span>
+<span class="token keyword">if</span> score <span class="token operator">&gt;=</span> <span class="token number">90</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Grade: A"</span><span class="token punctuation">)</span>
+<span class="token keyword">elif</span> score <span class="token operator">&gt;=</span> <span class="token number">80</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Grade: B"</span><span class="token punctuation">)</span>
+<span class="token keyword">elif</span> score <span class="token operator">&gt;=</span> <span class="token number">70</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Grade: C"</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Grade: D or F"</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="comparison-operators">Comparison Operators</h3>
+<ul>
+<li><code>==</code> : equal to</li>
+<li><code>!=</code> : not equal to</li>
+<li><code>&lt;</code>  : less than</li>
+<li><code>&gt;</code>  : greater than</li>
+<li><code>&lt;=</code> : less than or equal to</li>
+<li><code>&gt;=</code> : greater than or equal to</li>
+</ul>
+<h3 id="logical-operators">Logical Operators</h3>
+<ul>
+<li><code>and</code> : True if both conditions are True</li>
+<li><code>or</code>  : True if at least one condition is True</li>
+<li><code>not</code> : True if the condition is False</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre class=" language-python"><code class="prism  language-python">temperature <span class="token operator">=</span> <span class="token number">22</span>
+is_sunny <span class="token operator">=</span> <span class="token boolean">True</span>
+
+<span class="token keyword">if</span> temperature <span class="token operator">&gt;</span> <span class="token number">20</span> <span class="token operator">and</span> is_sunny<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Great day for a walk!"</span><span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h2 id="indentation">3.3 Indentation</h2>
+<p>Python uses indentation (spaces or tabs) to define code blocks. Consistent indentation is crucial.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">if</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"This is indented and part of the if block."</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"This is outside the if block."</span><span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h2 id="loops">3.4 Loops</h2>
+<p>Loops let you repeat actions multiple times.</p>
+<h3 id="the-while-loop">The <code>while</code> Loop</h3>
+<p>Repeats as long as a condition is True.</p>
+<pre class=" language-python"><code class="prism  language-python">count <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span> count <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Counting:"</span><span class="token punctuation">,</span> count<span class="token punctuation">)</span>
+    count <span class="token operator">+=</span> <span class="token number">1</span>
+</code></pre>
+<h3 id="the-for-loop">The <code>for</code> Loop</h3>
+<p>Iterates over a sequence (list, string, range, etc.).</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">for</span> letter <span class="token keyword">in</span> <span class="token string">"cat"</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>letter<span class="token punctuation">)</span>
+</code></pre>
+<h4 id="using-range">Using <code>range()</code></h4>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>  <span class="token comment"># Prints 0 to 4</span>
+</code></pre>
+<hr>
+<h2 id="loop-control-statements">3.5 Loop Control Statements</h2>
+<ul>
+<li><code>break</code> : Exit the loop immediately.</li>
+<li><code>continue</code> : Skip to the next iteration.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">:</span>
+        <span class="token keyword">break</span>  <span class="token comment"># Stops the loop when i is 5</span>
+    <span class="token keyword">if</span> i <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">continue</span>  <span class="token comment"># Skips even numbers</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h2 id="the-pass-statement">3.6 The <code>pass</code> Statement</h2>
+<p><code>pass</code> is a placeholder that does nothing; useful when a statement is required syntactically.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">if</span> <span class="token boolean">False</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>  <span class="token comment"># Code not yet implemented</span>
+</code></pre>
+<hr>
+<h2 id="nested-control-flow">3.7 Nested Control Flow</h2>
+<p>You can nest <code>if</code> statements and loops inside each other.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> i <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token string">"is even"</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token string">"is odd"</span><span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h2 id="summary-1">3.8 Summary</h2>
+<ul>
+<li>Use <code>if</code>, <code>elif</code>, and <code>else</code> for decision-making.</li>
+<li>Comparison and logical operators build complex conditions.</li>
+<li>Use <code>for</code> and <code>while</code> loops for repetition.</li>
+<li>Control loop execution with <code>break</code>, <code>continue</code>, and <code>pass</code>.</li>
+<li>Indentation is essential in Python.</li>
+</ul>
+<p>In the next chapter, we’ll explore Python’s core data structures: lists, tuples, sets, and dictionaries.</p>
+<hr>
+<hr>
+<h1 id="chapter-4-data-structures">Chapter 4: Data Structures</h1>
+<h2 id="introduction-2">4.1 Introduction</h2>
+<p>Data structures help you organize, store, and manipulate data efficiently. Python provides several built-in data structures, each suited to different types of tasks. This chapter covers lists, tuples, sets, and dictionaries.</p>
+<hr>
+<h2 id="lists">4.2 Lists</h2>
+<p>A list is an ordered, mutable collection of items.</p>
+<h3 id="creating-lists">Creating Lists</h3>
+<pre class=" language-python"><code class="prism  language-python">fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"apple"</span><span class="token punctuation">,</span> <span class="token string">"banana"</span><span class="token punctuation">,</span> <span class="token string">"cherry"</span><span class="token punctuation">]</span>
+numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+mixed <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"hello"</span><span class="token punctuation">,</span> <span class="token number">3.14</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">]</span>
+</code></pre>
+<h3 id="accessing-elements">Accessing Elements</h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>fruits<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>    <span class="token comment"># "apple"</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>fruits<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>   <span class="token comment"># "cherry"</span>
+</code></pre>
+<h3 id="slicing">Slicing</h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>numbers<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span>     <span class="token comment"># [2, 3, 4]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>numbers<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>      <span class="token comment"># [1, 2, 3]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>numbers<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>     <span class="token comment"># [1, 3, 5]</span>
+</code></pre>
+<h3 id="modifying-lists">Modifying Lists</h3>
+<pre class=" language-python"><code class="prism  language-python">fruits<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"blueberry"</span>
+fruits<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"date"</span><span class="token punctuation">)</span>
+fruits<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"banana"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>fruits<span class="token punctuation">)</span>
+</code></pre>
+<h3 id="removing-items">Removing Items</h3>
+<pre class=" language-python"><code class="prism  language-python">fruits<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">"banana"</span><span class="token punctuation">)</span>   <span class="token comment"># Removes first occurrence</span>
+popped <span class="token operator">=</span> fruits<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment"># Removes and returns last item</span>
+<span class="token keyword">del</span> fruits<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>             <span class="token comment"># Deletes item at index 0</span>
+</code></pre>
+<h3 id="list-methods">List Methods</h3>
+<ul>
+<li><code>append(item)</code>: Add item to end</li>
+<li><code>insert(index, item)</code>: Insert at index</li>
+<li><code>remove(item)</code>: Remove first occurrence</li>
+<li><code>pop(index)</code>: Remove and return item at index (default last)</li>
+<li><code>sort()</code>, <code>reverse()</code>, <code>count(item)</code>, <code>index(item)</code></li>
+</ul>
+<hr>
+<h2 id="tuples">4.3 Tuples</h2>
+<p>A tuple is an ordered, immutable collection.</p>
+<h3 id="creating-tuples">Creating Tuples</h3>
+<pre class=" language-python"><code class="prism  language-python">coordinates <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+person <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"Alice"</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span>
+single <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">,</span><span class="token punctuation">)</span>  <span class="token comment"># Note the comma</span>
+</code></pre>
+<h3 id="accessing-elements-1">Accessing Elements</h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>coordinates<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># 5</span>
+</code></pre>
+<h3 id="immutability">Immutability</h3>
+<ul>
+<li>Tuples cannot be changed after creation.</li>
+<li>Useful for fixed data or as dictionary keys.</li>
+</ul>
+<hr>
+<h2 id="sets">4.4 Sets</h2>
+<p>A set is an unordered collection of unique items.</p>
+<h3 id="creating-sets">Creating Sets</h3>
+<pre class=" language-python"><code class="prism  language-python">colors <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"red"</span><span class="token punctuation">,</span> <span class="token string">"green"</span><span class="token punctuation">,</span> <span class="token string">"blue"</span><span class="token punctuation">}</span>
+numbers <span class="token operator">=</span> <span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span>  <span class="token comment"># {1, 2, 3}</span>
+</code></pre>
+<h3 id="set-operations">Set Operations</h3>
+<pre class=" language-python"><code class="prism  language-python">a <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span>
+b <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">}</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a <span class="token operator">|</span> b<span class="token punctuation">)</span>  <span class="token comment"># Union: {1, 2, 3, 4, 5}</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a <span class="token operator">&amp;</span> b<span class="token punctuation">)</span>  <span class="token comment"># Intersection: {3}</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a <span class="token operator">-</span> b<span class="token punctuation">)</span>  <span class="token comment"># Difference: {1, 2}</span>
+</code></pre>
+<h3 id="methods">Methods</h3>
+<ul>
+<li><code>add(item)</code>, <code>remove(item)</code>, <code>discard(item)</code>, <code>clear()</code></li>
+</ul>
+<hr>
+<h2 id="dictionaries">4.5 Dictionaries</h2>
+<p>A dictionary is an unordered collection of key-value pairs.</p>
+<h3 id="creating-dictionaries">Creating Dictionaries</h3>
+<pre class=" language-python"><code class="prism  language-python">person <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"Bob"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token punctuation">:</span> <span class="token number">25</span><span class="token punctuation">}</span>
+empty <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="accessing-and-modifying">Accessing and Modifying</h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>person<span class="token punctuation">[</span><span class="token string">"name"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>        <span class="token comment"># "Bob"</span>
+person<span class="token punctuation">[</span><span class="token string">"age"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">26</span>
+person<span class="token punctuation">[</span><span class="token string">"city"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"London"</span>
+</code></pre>
+<h3 id="removing-keys">Removing Keys</h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">del</span> person<span class="token punctuation">[</span><span class="token string">"city"</span><span class="token punctuation">]</span>
+removed <span class="token operator">=</span> person<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">"age"</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="iterating">Iterating</h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">for</span> key <span class="token keyword">in</span> person<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> person<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> value <span class="token keyword">in</span> person<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> person<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> <span class="token string">"-&gt;"</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h2 id="nesting-data-structures">4.6 Nesting Data Structures</h2>
+<p>You can combine data structures:</p>
+<pre class=" language-python"><code class="prism  language-python">users <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"Alice"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token punctuation">:</span> <span class="token number">30</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"Bob"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token punctuation">:</span> <span class="token number">25</span><span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+matrix <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+</code></pre>
+<hr>
+<h2 id="summary-2">4.7 Summary</h2>
+<ul>
+<li><strong>Lists:</strong> Ordered, mutable, allow duplicates.</li>
+<li><strong>Tuples:</strong> Ordered, immutable, allow duplicates.</li>
+<li><strong>Sets:</strong> Unordered, mutable, unique elements.</li>
+<li><strong>Dictionaries:</strong> Unordered, mutable, key-value pairs.</li>
+</ul>
+<p>These structures are core to organizing data in Python. Next, we’ll see how to write reusable code using functions and modules.</p>
+<hr>
+<hr>
+<h1 id="chapter-5-functions-and-modules">Chapter 5: Functions and Modules</h1>
+<h2 id="introduction-3">5.1 Introduction</h2>
+<p>Functions and modules are essential for writing organized, reusable, and maintainable code. Functions let you group code into blocks that can be executed repeatedly, while modules allow you to organize code into separate files and use Python’s vast ecosystem of libraries.</p>
+<hr>
+<h2 id="defining-and-calling-functions">5.2 Defining and Calling Functions</h2>
+<p>A function is a block of code that performs a specific task and can be called by name.</p>
+<h3 id="defining-a-function">Defining a Function</h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">greet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello!"</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="calling-a-function">Calling a Function</h3>
+<pre class=" language-python"><code class="prism  language-python">greet<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Outputs: Hello!</span>
+</code></pre>
+<h3 id="function-parameters-and-arguments">Function Parameters and Arguments</h3>
+<p>Functions can take inputs (parameters):</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">greet</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello,"</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span>
+
+greet<span class="token punctuation">(</span><span class="token string">"Alice"</span><span class="token punctuation">)</span>  <span class="token comment"># Outputs: Hello, Alice</span>
+</code></pre>
+<p>You can have multiple parameters:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b
+
+result <span class="token operator">=</span> add<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>  <span class="token comment"># result is 7</span>
+</code></pre>
+<hr>
+<h2 id="return-values">5.3 Return Values</h2>
+<p>Functions can return values using the <code>return</code> statement.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">square</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> x <span class="token operator">*</span> x
+
+result <span class="token operator">=</span> square<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>  <span class="token comment"># result is 25</span>
+</code></pre>
+<p>If no <code>return</code> is specified, the function returns <code>None</code>.</p>
+<hr>
+<h2 id="default-parameters-and-keyword-arguments">5.4 Default Parameters and Keyword Arguments</h2>
+<p>You can provide default values for parameters:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">greet</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"World"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello,"</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span>
+
+greet<span class="token punctuation">(</span><span class="token punctuation">)</span>           <span class="token comment"># Outputs: Hello, World</span>
+greet<span class="token punctuation">(</span><span class="token string">"Bob"</span><span class="token punctuation">)</span>      <span class="token comment"># Outputs: Hello, Bob</span>
+</code></pre>
+<p>Keyword arguments allow you to specify parameters by name:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">power</span><span class="token punctuation">(</span>base<span class="token punctuation">,</span> exponent<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> base <span class="token operator">**</span> exponent
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>power<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>           <span class="token comment"># 9</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>power<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> exponent<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 27</span>
+</code></pre>
+<hr>
+<h2 id="variable-scope">5.5 Variable Scope</h2>
+<ul>
+<li><strong>Local variables</strong> exist only within the function.</li>
+<li><strong>Global variables</strong> can be accessed throughout the file.</li>
+</ul>
+<pre class=" language-python"><code class="prism  language-python">x <span class="token operator">=</span> <span class="token number">10</span>  <span class="token comment"># Global</span>
+
+<span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    y <span class="token operator">=</span> <span class="token number">5</span>  <span class="token comment"># Local</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
+
+foo<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># print(y)  # Error: y is not defined outside foo()</span>
+</code></pre>
+<p>To modify a global variable inside a function, use the <code>global</code> keyword.</p>
+<hr>
+<h2 id="docstrings">5.6 Docstrings</h2>
+<p>You can add documentation to functions using docstrings:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    Returns the sum of a and b.
+    """</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>add<span class="token punctuation">.</span>__doc__<span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h2 id="modules-and-imports">5.7 Modules and Imports</h2>
+<p>A module is a file containing Python definitions and code. You can use modules to organize your code and to use external libraries.</p>
+<h3 id="importing-modules">Importing Modules</h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> math
+<span class="token keyword">print</span><span class="token punctuation">(</span>math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 4.0</span>
+</code></pre>
+<p>You can import specific functions:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">from</span> math <span class="token keyword">import</span> sqrt
+<span class="token keyword">print</span><span class="token punctuation">(</span>sqrt<span class="token punctuation">(</span><span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 5.0</span>
+</code></pre>
+<p>You can also give an imported module an alias:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+</code></pre>
+<hr>
+<h2 id="creating-your-own-modules">5.8 Creating Your Own Modules</h2>
+<p>Any <code>.py</code> file is a module. For example, if you have <code>mymodule.py</code>:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># mymodule.py</span>
+<span class="token keyword">def</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello from mymodule!"</span><span class="token punctuation">)</span>
+</code></pre>
+<p>You can import and use it in another file:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> mymodule
+mymodule<span class="token punctuation">.</span>hello<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h2 id="the-python-standard-library">5.9 The Python Standard Library</h2>
+<p>Python comes with many useful modules, such as:</p>
+<ul>
+<li><code>math</code> — mathematical functions</li>
+<li><code>random</code> — random number generation</li>
+<li><code>datetime</code> — date and time manipulation</li>
+<li><code>os</code> — operating system utilities</li>
+<li><code>sys</code> — system-specific parameters and functions</li>
+</ul>
+<p>Explore the <a href="https://docs.python.org/3/library/">Python Standard Library documentation</a> for more.</p>
+<hr>
+<h2 id="summary-3">5.10 Summary</h2>
+<ul>
+<li>Functions let you organize and reuse code.</li>
+<li>Use parameters, return values, and docstrings to make functions flexible and understandable.</li>
+<li>Organize code in modules and import them as needed.</li>
+<li>Python’s standard library contains a wealth of ready-to-use modules.</li>
+</ul>
+<p>In the next chapter, you’ll learn how to handle files for reading and writing data.</p>
+<hr>
+<hr>
+<h1 id="chapter-6-file-handling">Chapter 6: File Handling</h1>
+<h2 id="introduction-4">6.1 Introduction</h2>
+<p>File handling is crucial for reading from and writing to files, allowing your Python programs to interact with data stored on disk. This chapter covers opening, reading, writing, and closing files, as well as best practices for working with files.</p>
+<hr>
+<h2 id="opening-files">6.2 Opening Files</h2>
+<p>Use the built-in <code>open()</code> function to work with files. The basic syntax is:</p>
+<pre class=" language-python"><code class="prism  language-python">file_object <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"filename.txt"</span><span class="token punctuation">,</span> <span class="token string">"mode"</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Common modes:</strong></p>
+<ul>
+<li><code>"r"</code> : Read (default). Error if file does not exist.</li>
+<li><code>"w"</code> : Write. Creates file if it doesn’t exist, truncates if it does.</li>
+<li><code>"a"</code> : Append. Creates file if it doesn’t exist.</li>
+<li><code>"b"</code> : Binary mode (e.g., <code>"rb"</code>, <code>"wb"</code>).</li>
+</ul>
+<p>Example:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token builtin">file</span> <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"example.txt"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h2 id="reading-files">6.3 Reading Files</h2>
+<h3 id="reading-the-entire-file">Reading the Entire File</h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token builtin">file</span> <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"example.txt"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span>
+content <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span>
+<span class="token builtin">file</span><span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="reading-line-by-line">Reading Line by Line</h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token builtin">file</span> <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"example.txt"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> line <span class="token keyword">in</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>line<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token builtin">file</span><span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="reading-lines-into-a-list">Reading Lines into a List</h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token builtin">file</span> <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"example.txt"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span>
+lines <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>lines<span class="token punctuation">)</span>
+<span class="token builtin">file</span><span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h2 id="writing-files">6.4 Writing Files</h2>
+<h3 id="overwriting-contents">Overwriting Contents</h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token builtin">file</span> <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"output.txt"</span><span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span>
+<span class="token builtin">file</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">"Hello, world!\n"</span><span class="token punctuation">)</span>
+<span class="token builtin">file</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">"This is a new file.\n"</span><span class="token punctuation">)</span>
+<span class="token builtin">file</span><span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="appending-to-files">Appending to Files</h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token builtin">file</span> <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"output.txt"</span><span class="token punctuation">,</span> <span class="token string">"a"</span><span class="token punctuation">)</span>
+<span class="token builtin">file</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">"Adding another line.\n"</span><span class="token punctuation">)</span>
+<span class="token builtin">file</span><span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h2 id="closing-files">6.5 Closing Files</h2>
+<p>Always close files to free up system resources.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token builtin">file</span> <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"data.txt"</span><span class="token punctuation">)</span>
+<span class="token comment"># ... work with file ...</span>
+<span class="token builtin">file</span><span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h2 id="using-with-statements-context-managers">6.6 Using <code>with</code> Statements (Context Managers)</h2>
+<p>A safer and more concise way to handle files is with the <code>with</code> statement, which automatically closes the file:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"example.txt"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+    content <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span>
+<span class="token comment"># File is automatically closed here</span>
+</code></pre>
+<hr>
+<h2 id="file-paths">6.7 File Paths</h2>
+<ul>
+<li>By default, files are opened relative to the current working directory.</li>
+<li>To work with files in other directories, use absolute or relative paths.</li>
+<li>Use the <code>os</code> and <code>pathlib</code> modules for cross-platform file paths.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> os
+<span class="token keyword">print</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># Get current working directory</span>
+
+<span class="token keyword">from</span> pathlib <span class="token keyword">import</span> Path
+p <span class="token operator">=</span> Path<span class="token punctuation">(</span><span class="token string">"folder"</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token string">"file.txt"</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>p<span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h2 id="handling-file-exceptions">6.8 Handling File Exceptions</h2>
+<p>Use <code>try-except</code> blocks to handle errors like missing files:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"missing.txt"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+        data <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span> FileNotFoundError<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"File not found!"</span><span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h2 id="working-with-other-file-types">6.9 Working with Other File Types</h2>
+<p>For binary files, add <code>"b"</code> to the mode:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"image.png"</span><span class="token punctuation">,</span> <span class="token string">"rb"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+    data <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>For reading and writing CSV, JSON, and other formats, use modules like <code>csv</code> and <code>json</code>:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> json
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"data.json"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    data <span class="token operator">=</span> json<span class="token punctuation">.</span>load<span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h2 id="summary-4">6.10 Summary</h2>
+<ul>
+<li>Use <code>open()</code> to access files, specifying the appropriate mode.</li>
+<li>Always close files, or use <code>with</code> statements for automatic closing.</li>
+<li>Handle file paths and exceptions for robust code.</li>
+<li>Use libraries like <code>csv</code> and <code>json</code> for structured file formats.</li>
+</ul>
+<p>Next, you’ll learn how to handle errors and exceptions in Python programs.</p>
+<hr>
+<hr>
+<h1 id="chapter-7-error-handling-and-exceptions">Chapter 7: Error Handling and Exceptions</h1>
+<h2 id="introduction-5">7.1 Introduction</h2>
+<p>Errors are inevitable in programming. Python provides a robust system for handling errors and exceptions, allowing you to write more reliable and user-friendly programs. In this chapter, you’ll learn how to anticipate, catch, and respond to exceptions.</p>
+<hr>
+<h2 id="what-are-exceptions">7.2 What Are Exceptions?</h2>
+<p>An <strong>exception</strong> is an error detected during execution. When an exception occurs, normal program flow is interrupted. If not handled, the program will terminate and display a traceback.</p>
+<p><strong>Example:</strong></p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">10</span> <span class="token operator">/</span> <span class="token number">0</span><span class="token punctuation">)</span>  <span class="token comment"># Raises ZeroDivisionError</span>
+numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>numbers<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Raises IndexError</span>
+</code></pre>
+<hr>
+<h2 id="the-try-except-block">7.3 The try-except Block</h2>
+<p>Use <code>try-except</code> blocks to handle exceptions gracefully.</p>
+<p><strong>Syntax:</strong></p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>
+    <span class="token comment"># Code that might raise an exception</span>
+    risky_code<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span> SomeException<span class="token punctuation">:</span>
+    <span class="token comment"># Code to handle the exception</span>
+    handle_the_problem<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>
+    x <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Enter a number: "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">100</span> <span class="token operator">/</span> x<span class="token punctuation">)</span>
+<span class="token keyword">except</span> ValueError<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Please enter a valid number!"</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span> ZeroDivisionError<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Cannot divide by zero!"</span><span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h2 id="catching-all-exceptions">7.4 Catching All Exceptions</h2>
+<p>You can catch any exception by omitting the exception type, but use this sparingly.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>
+    <span class="token comment"># risky code</span>
+<span class="token keyword">except</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Something went wrong."</span><span class="token punctuation">)</span>
+</code></pre>
+<p>It’s better to catch specific exceptions when possible.</p>
+<hr>
+<h2 id="the-else-and-finally-blocks">7.5 The else and finally Blocks</h2>
+<ul>
+<li><code>else</code> runs if no exception occurs.</li>
+<li><code>finally</code> always runs, whether or not there was an exception (useful for cleanup).</li>
+</ul>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>
+    <span class="token builtin">file</span> <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"data.txt"</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span> FileNotFoundError<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"File not found."</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    data <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token builtin">file</span><span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">finally</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Attempted to open file."</span><span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h2 id="raising-exceptions">7.6 Raising Exceptions</h2>
+<p>You can raise exceptions intentionally using the <code>raise</code> statement.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">set_age</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> age <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">"Age cannot be negative!"</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Age set to:"</span><span class="token punctuation">,</span> age<span class="token punctuation">)</span>
+
+set_age<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">)</span>  <span class="token comment"># Raises ValueError</span>
+</code></pre>
+<hr>
+<h2 id="creating-custom-exceptions">7.7 Creating Custom Exceptions</h2>
+<p>Define your own exception classes by inheriting from <code>Exception</code>.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">NegativeNumberError</span><span class="token punctuation">(</span>Exception<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+
+<span class="token keyword">def</span> <span class="token function">check_positive</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> number <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">raise</span> NegativeNumberError<span class="token punctuation">(</span><span class="token string">"Negative numbers are not allowed."</span><span class="token punctuation">)</span>
+
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    check_positive<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span> NegativeNumberError <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h2 id="common-built-in-exceptions">7.8 Common Built-in Exceptions</h2>
+<ul>
+<li><code>ValueError</code>: Wrong value type (e.g., <code>int("abc")</code>)</li>
+<li><code>TypeError</code>: Wrong data type used</li>
+<li><code>IndexError</code>: Out-of-range list index</li>
+<li><code>KeyError</code>: Missing dictionary key</li>
+<li><code>ZeroDivisionError</code>: Division by zero</li>
+<li><code>FileNotFoundError</code>: File does not exist</li>
+<li><code>ImportError</code>: Import fails</li>
+</ul>
+<hr>
+<h2 id="best-practices">7.9 Best Practices</h2>
+<ul>
+<li>Catch only exceptions you can handle meaningfully.</li>
+<li>Use <code>finally</code> to close files or release resources.</li>
+<li>Avoid bare <code>except:</code> unless you have a very good reason.</li>
+<li>Provide informative error messages to users.</li>
+</ul>
+<hr>
+<h2 id="summary-5">7.10 Summary</h2>
+<ul>
+<li>Python uses exceptions to handle errors during execution.</li>
+<li>Use <code>try-except</code> blocks for graceful error handling.</li>
+<li>Use <code>else</code> for code that only runs if no exception occurs, and <code>finally</code> for cleanup.</li>
+<li>Raise exceptions intentionally with <code>raise</code> and create custom exceptions as needed.</li>
+</ul>
+<p>Next, you’ll learn about object-oriented programming and how to use classes and objects in Python.</p>
+<hr>
+<hr>
+<h1 id="chapter-8-object-oriented-programming-oop">Chapter 8: Object-Oriented Programming (OOP)</h1>
+<h2 id="introduction-6">8.1 Introduction</h2>
+<p>Object-Oriented Programming (OOP) is a paradigm that organizes code using objects and classes. OOP makes it easier to manage complex programs by grouping data and behavior together, encouraging code reuse and modularity.</p>
+<hr>
+<h2 id="classes-and-objects">8.2 Classes and Objects</h2>
+<p>A <strong>class</strong> is a blueprint for creating objects, which are instances of that class.</p>
+<h3 id="defining-a-class">Defining a Class</h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">Dog</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+</code></pre>
+<h3 id="creating-objects">Creating Objects</h3>
+<pre class=" language-python"><code class="prism  language-python">my_dog <span class="token operator">=</span> Dog<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>my_dog<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># &lt;class '__main__.Dog'&gt;</span>
+</code></pre>
+<hr>
+<h2 id="instance-attributes-and-methods">8.3 Instance Attributes and Methods</h2>
+<p>Attributes are variables that belong to an object. Methods are functions defined within a class.</p>
+<h3 id="the-__init__-method">The <code>__init__</code> Method</h3>
+<p>The <code>__init__</code> method initializes the object’s attributes.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">Dog</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+        self<span class="token punctuation">.</span>age <span class="token operator">=</span> age
+
+my_dog <span class="token operator">=</span> Dog<span class="token punctuation">(</span><span class="token string">"Buddy"</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_dog<span class="token punctuation">.</span>name<span class="token punctuation">)</span>  <span class="token comment"># Buddy</span>
+</code></pre>
+<h3 id="instance-methods">Instance Methods</h3>
+<p>Instance methods operate on the object’s data.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">Dog</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+    <span class="token keyword">def</span> <span class="token function">bark</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">,</span> <span class="token string">"says woof!"</span><span class="token punctuation">)</span>
+
+my_dog <span class="token operator">=</span> Dog<span class="token punctuation">(</span><span class="token string">"Fido"</span><span class="token punctuation">)</span>
+my_dog<span class="token punctuation">.</span>bark<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Fido says woof!</span>
+</code></pre>
+<hr>
+<h2 id="class-attributes-and-methods">8.4 Class Attributes and Methods</h2>
+<ul>
+<li><strong>Class attributes</strong> are shared among all instances.</li>
+<li><strong>Instance attributes</strong> are unique to each object.</li>
+</ul>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">Cat</span><span class="token punctuation">:</span>
+    species <span class="token operator">=</span> <span class="token string">"Felis catus"</span>  <span class="token comment"># Class attribute</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name  <span class="token comment"># Instance attribute</span>
+
+cat1 <span class="token operator">=</span> Cat<span class="token punctuation">(</span><span class="token string">"Whiskers"</span><span class="token punctuation">)</span>
+cat2 <span class="token operator">=</span> Cat<span class="token punctuation">(</span><span class="token string">"Luna"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>cat1<span class="token punctuation">.</span>species<span class="token punctuation">,</span> cat2<span class="token punctuation">.</span>species<span class="token punctuation">)</span>  <span class="token comment"># Felis catus Felis catus</span>
+</code></pre>
+<hr>
+<h2 id="inheritance">8.5 Inheritance</h2>
+<p>Inheritance lets you create a new class based on an existing one.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">Animal</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">speak</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Some sound"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span>Animal<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">speak</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Woof!"</span><span class="token punctuation">)</span>
+
+d <span class="token operator">=</span> Dog<span class="token punctuation">(</span><span class="token punctuation">)</span>
+d<span class="token punctuation">.</span>speak<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Woof!</span>
+</code></pre>
+<ul>
+<li>The <code>Dog</code> class inherits from <code>Animal</code> and overrides the <code>speak</code> method.</li>
+</ul>
+<hr>
+<h2 id="the-super-function">8.6 The <code>super()</code> Function</h2>
+<p>Use <code>super()</code> to call methods from the parent class.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">Animal</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+
+<span class="token keyword">class</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span>Animal<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">,</span> breed<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>breed <span class="token operator">=</span> breed
+</code></pre>
+<hr>
+<h2 id="encapsulation-and-private-members">8.7 Encapsulation and Private Members</h2>
+<ul>
+<li>Encapsulation is the practice of restricting access to data.</li>
+<li>Prefix attributes with a single underscore (<code>_</code>) to indicate “protected” (by convention).</li>
+<li>Prefix with double underscores (<code>__</code>) for name mangling (makes it harder to access from outside).</li>
+</ul>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>_name <span class="token operator">=</span> name  <span class="token comment"># Protected</span>
+        self<span class="token punctuation">.</span>__secret <span class="token operator">=</span> <span class="token string">"hidden"</span>  <span class="token comment"># Private</span>
+
+p <span class="token operator">=</span> Person<span class="token punctuation">(</span><span class="token string">"Alice"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>_name<span class="token punctuation">)</span>  <span class="token comment"># Allowed, but discouraged</span>
+<span class="token comment"># print(p.__secret)  # AttributeError</span>
+</code></pre>
+<hr>
+<h2 id="polymorphism">8.8 Polymorphism</h2>
+<p>Polymorphism allows different classes to provide different implementations of the same method.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">Bird</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">speak</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Chirp"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Duck</span><span class="token punctuation">(</span>Bird<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">speak</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Quack"</span><span class="token punctuation">)</span>
+
+animals <span class="token operator">=</span> <span class="token punctuation">[</span>Bird<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Duck<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> a <span class="token keyword">in</span> animals<span class="token punctuation">:</span>
+    a<span class="token punctuation">.</span>speak<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Output: Chirp Quack</span>
+</code></pre>
+<hr>
+<h2 id="special-methods">8.9 Special Methods</h2>
+<p>Special methods (dunder methods) define behavior for built-in operations.</p>
+<ul>
+<li><code>__str__</code>: String representation</li>
+<li><code>__len__</code>: Length</li>
+<li><code>__eq__</code>: Equality</li>
+</ul>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">Book</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> title<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>title <span class="token operator">=</span> title
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> f<span class="token string">"Book: {self.title}"</span>
+
+b <span class="token operator">=</span> Book<span class="token punctuation">(</span><span class="token string">"1984"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>  <span class="token comment"># Book: 1984</span>
+</code></pre>
+<hr>
+<h2 id="summary-6">8.10 Summary</h2>
+<ul>
+<li>OOP structures code using classes and objects.</li>
+<li>Use instance and class attributes, and define methods to specify behavior.</li>
+<li>Inheritance and polymorphism allow for code reuse and extension.</li>
+<li>Encapsulation protects object data.</li>
+<li>Special methods let you customize how objects interact with Python’s built-in features.</li>
+</ul>
+<p>In the next chapter, you’ll learn how to work with external libraries and manage dependencies in Python.</p>
+<hr>
+<hr>
+<h1 id="chapter-9-working-with-external-libraries">Chapter 9: Working with External Libraries</h1>
+<h2 id="introduction-7">9.1 Introduction</h2>
+<p>Python’s true power comes from its vast ecosystem of external libraries (also called packages or modules). These libraries expand Python’s capabilities for web development, data science, networking, automation, and much more. This chapter shows you how to find, install, and use external libraries, as well as manage dependencies with virtual environments.</p>
+<hr>
+<h2 id="finding-libraries">9.2 Finding Libraries</h2>
+<ul>
+<li>The <a href="https://pypi.org/">Python Package Index (PyPI)</a> is the primary repository for Python libraries.</li>
+<li>Search PyPI or use Google to find libraries for your needs.
+<ul>
+<li>Examples: <code>requests</code> for HTTP, <code>numpy</code> for numerical computing, <code>pandas</code> for data analysis, <code>matplotlib</code> for plotting.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="installing-libraries-with-pip">9.3 Installing Libraries with <code>pip</code></h2>
+<ul>
+<li><code>pip</code> is Python’s standard package manager.</li>
+<li>To install a package, run in your terminal:</li>
+</ul>
+<pre class=" language-sh"><code class="prism  language-sh">pip install package_name
+</code></pre>
+<ul>
+<li>To upgrade an existing package:</li>
+</ul>
+<pre class=" language-sh"><code class="prism  language-sh">pip install --upgrade package_name
+</code></pre>
+<ul>
+<li>To uninstall a package:</li>
+</ul>
+<pre class=" language-sh"><code class="prism  language-sh">pip uninstall package_name
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre class=" language-sh"><code class="prism  language-sh">pip install requests
+</code></pre>
+<hr>
+<h2 id="importing-and-using-libraries">9.4 Importing and Using Libraries</h2>
+<p>After installation, import the library in your Python code:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> requests
+
+response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">"https://api.github.com"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>status_code<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Many libraries have their own documentation and usage guides online. Refer to the official docs for best practices.</p>
+<hr>
+<h2 id="managing-project-dependencies">9.5 Managing Project Dependencies</h2>
+<p>As your projects grow, you’ll likely need multiple libraries. It’s important to manage dependencies carefully to avoid version conflicts and ensure reproducibility.</p>
+<h3 id="listing-installed-packages">Listing Installed Packages</h3>
+<pre class=" language-sh"><code class="prism  language-sh">pip list
+</code></pre>
+<h3 id="freezing-requirements">Freezing Requirements</h3>
+<p>Save a list of installed packages for your project:</p>
+<pre class=" language-sh"><code class="prism  language-sh">pip freeze &gt; requirements.txt
+</code></pre>
+<p>Install all dependencies in another environment:</p>
+<pre class=" language-sh"><code class="prism  language-sh">pip install -r requirements.txt
+</code></pre>
+<hr>
+<h2 id="virtual-environments">9.6 Virtual Environments</h2>
+<p>Virtual environments isolate your project’s dependencies from your system Python and other projects.</p>
+<h3 id="creating-a-virtual-environment">Creating a Virtual Environment</h3>
+<pre class=" language-sh"><code class="prism  language-sh">python -m venv venv
+</code></pre>
+<ul>
+<li>This creates a new folder named <code>venv</code> containing a separate Python environment.</li>
+</ul>
+<h3 id="activating-the-virtual-environment">Activating the Virtual Environment</h3>
+<ul>
+<li>
+<p><strong>Windows:</strong></p>
+<pre class=" language-sh"><code class="prism  language-sh">venv\Scripts\activate
+</code></pre>
+</li>
+<li>
+<p><strong>macOS/Linux:</strong></p>
+<pre class=" language-sh"><code class="prism  language-sh">source venv/bin/activate
+</code></pre>
+</li>
+<li>
+<p>When active, installed packages go only into this environment.</p>
+</li>
+</ul>
+<h3 id="deactivating">Deactivating</h3>
+<pre class=" language-sh"><code class="prism  language-sh">deactivate
+</code></pre>
+<hr>
+<h2 id="popular-libraries-to-explore">9.7 Popular Libraries to Explore</h2>
+<ul>
+<li><strong>requests</strong> – HTTP requests</li>
+<li><strong>numpy</strong> – Numerical operations</li>
+<li><strong>pandas</strong> – Data analysis</li>
+<li><strong>matplotlib</strong> – Plotting and visualization</li>
+<li><strong>flask</strong> / <strong>django</strong> – Web development</li>
+<li><strong>pytest</strong> – Testing</li>
+<li><strong>scikit-learn</strong> – Machine learning</li>
+<li><strong>beautifulsoup4</strong> – Web scraping</li>
+</ul>
+<hr>
+<h2 id="using-external-libraries-example">9.8 Using External Libraries: Example</h2>
+<p>Install and use <code>numpy</code>:</p>
+<pre class=" language-sh"><code class="prism  language-sh">pip install numpy
+</code></pre>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+a <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span>  <span class="token comment"># [2 4 6]</span>
+</code></pre>
+<hr>
+<h2 id="troubleshooting-and-best-practices">9.9 Troubleshooting and Best Practices</h2>
+<ul>
+<li>Always read the documentation for installation and usage instructions.</li>
+<li>Use virtual environments for each project.</li>
+<li>Use <code>requirements.txt</code> to share and reproduce dependencies.</li>
+<li>If you get errors about missing modules, confirm your virtual environment is active and you installed the package.</li>
+</ul>
+<hr>
+<h2 id="summary-7">9.10 Summary</h2>
+<ul>
+<li>External libraries expand Python’s capabilities.</li>
+<li>Use <code>pip</code> to install, upgrade, or remove packages.</li>
+<li>Use virtual environments to manage project dependencies and avoid conflicts.</li>
+<li>Explore PyPI for thousands of useful libraries.</li>
+</ul>
+<p>In the next chapter, you’ll apply what you’ve learned by building small projects and get tips for further learning.</p>
+<hr>
+<hr>
+<h1 id="chapter-10-practical-projects-and-next-steps">Chapter 10: Practical Projects and Next Steps</h1>
+<h2 id="introduction-8">10.1 Introduction</h2>
+<p>Now that you’ve refreshed your Python skills, it’s time to put your knowledge into practice. In this chapter, you’ll find ideas for small projects, learn basic testing and debugging techniques, and get resources for further learning.</p>
+<hr>
+<h2 id="small-project-ideas">10.2 Small Project Ideas</h2>
+<p>Try building simple projects to reinforce what you’ve learned:</p>
+<h3 id="calculator">1. Calculator</h3>
+<ul>
+<li>Build a command-line calculator that can add, subtract, multiply, and divide numbers.</li>
+<li>Use functions for each operation and handle user input and errors.</li>
+</ul>
+<h3 id="to-do-list">2. To-Do List</h3>
+<ul>
+<li>Create a program to manage tasks (add, remove, display).</li>
+<li>Store tasks in a list or a file for persistence.</li>
+</ul>
+<h3 id="number-guessing-game">3. Number Guessing Game</h3>
+<ul>
+<li>Write a game where the computer picks a random number and the user tries to guess it.</li>
+<li>Use loops, conditionals, and the <code>random</code> library.</li>
+</ul>
+<h3 id="simple-web-scraper">4. Simple Web Scraper</h3>
+<ul>
+<li>Use the <code>requests</code> and <code>beautifulsoup4</code> libraries to fetch and parse information from a website.</li>
+</ul>
+<h3 id="data-analysis-with-pandas">5. Data Analysis with Pandas</h3>
+<ul>
+<li>Load a CSV file and generate basic statistics or plots using <code>pandas</code> and <code>matplotlib</code>.</li>
+</ul>
+<hr>
+<h2 id="basic-testing-and-debugging">10.3 Basic Testing and Debugging</h2>
+<h3 id="testing-functions">Testing Functions</h3>
+<p>Use Python’s built-in <code>unittest</code> or <code>pytest</code> frameworks to test your code.</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b
+
+<span class="token keyword">def</span> <span class="token function">test_add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">assert</span> add<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">5</span>
+    <span class="token keyword">assert</span> add<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span>
+
+test_add<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"All tests passed!"</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="debugging-techniques">Debugging Techniques</h3>
+<ul>
+<li>Use print statements to display variable values at different points in your code.</li>
+<li>Use Python’s built-in debugger:</li>
+</ul>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> pdb<span class="token punctuation">;</span> pdb<span class="token punctuation">.</span>set_trace<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<ul>
+<li>Most editors and IDEs come with graphical debugging tools.</li>
+</ul>
+<hr>
+<h2 id="version-control-with-git">10.4 Version Control with Git</h2>
+<ul>
+<li>Track and share your code using <a href="https://git-scm.com/">Git</a> and <a href="https://github.com/">GitHub</a>.</li>
+<li>Initialize a repository with <code>git init</code>.</li>
+<li>Make commits and push to a remote repository.</li>
+<li>Collaborate with others and keep track of project history.</li>
+</ul>
+<hr>
+<h2 id="next-steps-in-python">10.5 Next Steps in Python</h2>
+<h3 id="explore-more-advanced-topics">Explore More Advanced Topics</h3>
+<ul>
+<li><strong>Object-oriented programming (OOP) in depth</strong></li>
+<li><strong>Generators and iterators</strong></li>
+<li><strong>Decorators and context managers</strong></li>
+<li><strong>Asynchronous programming (async/await)</strong></li>
+<li><strong>Web development (Flask, Django)</strong></li>
+<li><strong>Data science, machine learning, and visualization</strong></li>
+</ul>
+<h3 id="learn-from-the-community">Learn from the Community</h3>
+<ul>
+<li>Join Python communities and forums:
+<ul>
+<li><a href="https://www.python.org/community/">Python.org Community</a></li>
+<li><a href="https://stackoverflow.com/questions/tagged/python">Stack Overflow</a></li>
+<li><a href="https://www.reddit.com/r/learnpython/">Reddit r/learnpython</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="recommended-resources">Recommended Resources</h3>
+<ul>
+<li><a href="https://docs.python.org/3/">Official Python Documentation</a></li>
+<li><a href="https://realpython.com/">Real Python Tutorials</a></li>
+<li><a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python</a></li>
+<li><a href="https://www.youtube.com/user/schafer5">Corey Schafer’s Python YouTube Tutorials</a></li>
+</ul>
+<hr>
+<h2 id="summary-8">10.6 Summary</h2>
+<ul>
+<li>Practice by building small, real-world projects.</li>
+<li>Test and debug your code to ensure reliability.</li>
+<li>Use version control to manage your work.</li>
+<li>Keep learning—Python’s ecosystem is vast and always evolving.</li>
+</ul>
+<p>Congratulations on completing your Python refresher! Keep coding and exploring.</p>
+
